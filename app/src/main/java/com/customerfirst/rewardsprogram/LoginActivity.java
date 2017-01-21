@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     @Bind(R.id.btn_login) Button _loginButton;
     @Bind(R.id.link_signup) TextView _signupLink;
     @Bind(R.id.spinner) Spinner _location;
+    @Bind(R.id.checkBox) CheckBox _checkBox;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -119,9 +121,14 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
+        String coupon;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference(UUID.randomUUID().toString());
-        myRef.setValue(_emailText.getText() + ";" + _passwordText.getText() + ";" + _location.getSelectedItem());
+        if(_checkBox.isChecked())
+            coupon = "coupon";
+        else
+            coupon = "none";
+        myRef.setValue(_emailText.getText() + ";" + _passwordText.getText() + ";" + _location.getSelectedItem() + ";" + coupon);
         _passwordText.setText("");
         _emailText.setText("");
     }
