@@ -14,6 +14,11 @@
         android:paddingRight="24dp"
         android:weightSum="1">
 
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2" />
+
         <ImageView android:src="@drawable/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

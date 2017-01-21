@@ -2,4 +2,24 @@
     <string name="app_name">Rewards Program</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string-array name="locations">
+        <item>AIBONITO</item>
+        <item>AÑASCO</item>
+        <item>ARROYO</item>
+        <item>CAYEY</item>
+        <item>GUAYAMA</item>
+        <item>ISABELA</item>
+        <item>MAYAGÜEZ</item>
+        <item>MOCA</item>
+        <item>MOROVIS</item>
+        <item>OROCOVIS</item>
+        <item>PATILLAS</item>
+        <item>PONCE</item>
+        <item>RÍO GRANDE</item>
+        <item>SALINAS</item>
+        <item>SAN SEBASTIÁN</item>
+        <item>TOA ALTA</item>
+        <item>VILLALBA</item>
+    </string-array>
+
 </resources>
