@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "924808499459",
+    "firebase_url": "https://rewardsprogram-e57cb.firebaseio.com",
+    "project_id": "rewardsprogram-e57cb",
+    "storage_bucket": "rewardsprogram-e57cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924808499459:android:6de8f60c38431cc6",
+        "android_client_info": {
+          "package_name": "com.customerfirst.rewardsprogram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924808499459-usbbpimb99i6s7phh6msu9mkmnll284c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.customerfirst.rewardsprogram",
+            "certificate_hash": "F5986A5A05340719FE017106AA8EF7BD61119B4B"
+          }
+        },
+        {
+          "client_id": "924808499459-6fa0pbsqi87nhq73t5l8s1do328qk3nm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-nClWF8QZwQ6LdyFfMu7vJthrrnFY4hw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924808499459-6fa0pbsqi87nhq73t5l8s1do328qk3nm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
