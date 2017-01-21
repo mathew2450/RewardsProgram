@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import butterknife.ButterKnife;
 import butterknife.Bind;
 
@@ -92,7 +95,13 @@ public class SignupActivity extends AppCompatActivity {
     public void onSignupSuccess() {
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
-        finish();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user");
+        myRef.setValue(_nameText.getText() + ";" + _emailText.getText() + ";" + _mobileText.getText());
+        _emailText.setText("");
+        _mobileText.setText("");
+        _nameText.setText("");
+        _nameText.requestFocus();
     }
 
     public void onSignupFailed() {

